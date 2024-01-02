@@ -24,7 +24,8 @@ All of the following folders are projects done during the studies:
 
 | Project name | Description |
 | ------------ | ----------- |
-| [`0x00-python-hello_world`](https://github.com/firacil/alx-higher_level_programming/tree/master/0x00-python-hello_world) | It aims to learn more about pointers and arrays in **Basic of Python language**.|
+| [`0x00-python-hello_world`](https://github.com/firacil/alx-higher_level_programming/tree/master/0x00-python-hello_world) | It aims to learn about Basic of Python Language in **Python language**.|
+| [`0x01-python-if_else_loops_functions`](https://github.com/firacil/alx-higher_level_programming/tree/master/0x01-python-if_else_loops_functions) | It aims to learn about loops, conditional statements & function in **Python language**.
 
 ## Collaborate
 
