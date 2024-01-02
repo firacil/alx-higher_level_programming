@@ -5,15 +5,14 @@ last = abs(number) % 10
 if number >= 0:
     last = number % 10
     if last > 5:
-        print("Last digit of {} is {} and"
+        print("Last digit of {:d} is {:d} and"
               " is greater than 5".format(number, last))
     elif last == 0:
-        print("Last digit of {} is {} and is 0".format(number, last))
+        print("Last digit of {:d} is {:d} and is 0".format(number, last))
     elif (last < 6) and not(0):
-        print("Last digit of {} is {} and is"
+        print("Last digit of {:d} is {:d} and is"
               " less than 6 and not 0".format(number, last))
 if number < 0:
-    last = abs(number) % 10
-    last = -last
-    print("Last digit of {} is {} and is"
+    last = number % -10
+    print("Last digit of {:d} is {:d} and is"
           " less than 6 and not 0".format(number, last))
