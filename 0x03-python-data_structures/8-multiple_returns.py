@@ -2,8 +2,8 @@
 
 def multiple_returns(sentence):
 
-    if sentence == '':
-        fchar = None
+    if sentence != '':
+        f_char = sentence[0]
     else:
-        fchar = sentence[0]
-    return(len(sentence), fchar)
+        f_char = None
+    return(len(sentence), f_char)
