@@ -7,6 +7,6 @@ def safe_print_list(my_list=[], x=0):
             print(f"{my_list[i]}", end="")
             tot += 1
         except IndexError:
-            break
+            continue
     print()
     return(tot)
