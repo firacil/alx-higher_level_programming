@@ -39,4 +39,4 @@ class Square():
 
 
         """
-    return self._size**2
+        return self._size**2
