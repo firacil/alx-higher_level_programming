@@ -9,15 +9,12 @@ class Square():
     def __init__(self, size=0):
         """Initialize a new Square
 
-
         Args:
             size(int): The size of square
-
 
         Raises:
             TypeError: size must be an integer
             ValueError: size must be >= 0
-
 
         """
         self.__size = size
@@ -28,15 +25,12 @@ class Square():
             raise ValueError("size must be >= 0")
 
     def area(self):
-        """ Calculate square area
-
+        """ Calculate current square area
 
         Args:
 
-
         Return:
             current square area
-
 
         """
         return self._size**2
