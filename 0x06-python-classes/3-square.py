@@ -33,4 +33,4 @@ class Square():
             current square area
 
         """
-        return self._size**2
+        return self.__size ** 2
