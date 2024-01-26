@@ -2,6 +2,7 @@
 # 3-square.py
 """ Defines a class Square"""
 
+
 class Square:
     """builted a square based on 3-square.py"""
 
