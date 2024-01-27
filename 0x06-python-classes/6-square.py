@@ -94,7 +94,7 @@ class Square:
             print()
         else:
             for _ in range(self.__position[1]):
-                print()
+                print(" ")
 
             for _ in range(self.__size):
                 for _ in range(self.__position[0]):
