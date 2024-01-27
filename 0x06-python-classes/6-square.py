@@ -2,6 +2,7 @@
 # 5-square.py
 """ Defines class square"""
 
+
 class Square:
     """ Build awesome square feature"""
 
@@ -49,3 +50,42 @@ class Square:
     @position.setter
     def position(self, value):
         """ set position based on the condition
+
+            Args:
+                value: value passed from user
+
+            Raise:
+                TypeError: postion must be a tuple of 2 positive integers
+
+         """
+        if isinstance(value, tuple) or len(value) == 2 or \
+           all(isinstance(x, int) and x > 0 for x in value):
+            self.__position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+    def area(self):
+        """ returns the area of the square
+
+        Return:
+            area of square
+        """
+        return self.__size ** 2
+
+    def my_print(self):
+        """ prints in stdout the square with the charachter # """
+
+        if self.__size == 0:
+            print()
+            return
+
+        for _ in range(self.__position[1]):
+            print()
+
+        for _ in range(self.size):
+            for _ in range(self.__position[0]):
+                print(' ', end="")
+
+            for _ in range(self.__size):
+                print("#", end="")
+            print()
