@@ -59,7 +59,7 @@ class Square:
 
          """
         if isinstance(value, tuple) or len(value) == 2 or \
-           all(isinstance(x, int) and x > 0 for x in value):
+           all(isinstance(x, int) and x >= 0 for x in value):
             self.__position = value
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
