@@ -1,0 +1,52 @@
+Test for 0-add-integer module
+=============================
+
+The 0-add_integer module will take two integers or can be float as arguments and return their addtion
+
+Usage
+=====
+
+Improting function from module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Adding two positive integers (a = 1 and b = 1)
+	>>> add_integer(1, 1)
+	2
+
+Adding one positive and one negetive integers (a = 2 and b = -2)
+	>>> add_integer(2, -2)
+	0
+
+Adding two negetive integers (a = -3 and b = -9)
+	>>> add_integer(-3, -9)
+	-12
+
+Adding one postive integer and one positive float (a = 2 and b = 3.5)
+	>>> add_integer(2, 3.5)
+	5
+
+Adding poistive floats (a = 2.5 and b = 2.5)
+	>>> add_integer(2.5, 2.5)
+	4
+
+Adding integer numbe and string (a = 4 and b = "Firaol")
+	>>> add_integer(4, "Firaol")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+Adding letters and positive integers (a = 'c' and b = 25)
+	>>> add_integer('c', 25)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+Adding two letters (a = 'c' and b = 'd')
+	>>> add_integer('c', 'd')
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+Adding two positive integers and second number will be passed as default value (a = 1 and b = 99)
+	>>> add_integer(1)
+	99
