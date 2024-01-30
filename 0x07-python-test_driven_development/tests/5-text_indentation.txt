@@ -1,0 +1,14 @@
+Test cases for 5-text_indentation module
+========================================
+
+module prints a text with 2 new lines after each of these charachters: ., ? and :
+
+Usage
+-----
+
+Importing function from module:
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation(5)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
