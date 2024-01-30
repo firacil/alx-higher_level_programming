@@ -3,7 +3,15 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """ prints names based on condition"""
+    """ prints names based on condition
+
+        Args:
+            first_name: first name to be passed
+            last_name: last name to be passed
+
+        Raises:
+            TypeError: when type error occured
+    """
 
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
