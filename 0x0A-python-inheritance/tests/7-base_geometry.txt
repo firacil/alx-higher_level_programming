@@ -12,6 +12,13 @@ Import funtion from module
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 	>>> bg = BaseGeometry()
 
+checking for module docstring:
+::
+
+	>>> m = __import__("7-base_geometry").__doc__
+	>>> len(m) > 1
+	True
+
 checking for passed argument to area
 ::
 
