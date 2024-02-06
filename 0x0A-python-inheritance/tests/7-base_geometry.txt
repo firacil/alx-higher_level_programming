@@ -1,0 +1,55 @@
+Test cases for module 7-base_geometry
+=====================================
+
+7-base_geometry will validate value if it is integer or not
+
+start
+-----------------------------
+
+Import funtion from module
+::
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry
+
+check for area failure:
+::
+
+	>>> x = bg()
+	>>> x.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+
+Checkfor simple int value:
+::
+
+	>>> bg.integer_validator("name", "John")
+	Traceback (most recent call last):
+	...
+	[TypeError] name must be an integer
+
+checking for ValueError when value is equal to 0:
+::
+
+	>>> bg.integer_validator("he", 0)
+	Traceback (most recent call last):
+	...
+	[ValueError] he must be greater than 0
+
+checking for valueError when value is less than 0:
+::
+
+	>>> bg.integer_validator("me", -1)
+	Traceback (most recent call last):
+	...
+	[ValueError] me must be greater than 0
+
+checking for argument passed:
+::
+
+	>>> bg.integer_validator("him, 0, "her")
+	Traceback (most recent call last):
+	...
+	[TypeError] integer_validator takes 3 positional arguments but 4 were given
+	>>>
