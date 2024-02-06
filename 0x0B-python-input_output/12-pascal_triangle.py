@@ -6,10 +6,10 @@ def pascal_triangle(n):
     """ returns a list of lists of integer representating
         pascal triangle of n
     """
-    triangle = []
     if n <= 0:
         return []
 
+    triangle = []
     for i in range(n):
         row = [1] * (i + 1) # intialize each row
         if i >= 2:
