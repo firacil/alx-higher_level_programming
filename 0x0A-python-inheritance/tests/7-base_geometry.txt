@@ -42,7 +42,12 @@ check for area failure:
 	...
 	Exception: area() is not implemented
 
-Checkfor simple int value:
+checking for normal integer_validator:
+::
+
+	>>> bg.integer_validator("name", 23)
+
+Checkfor for TypeError when value passed as string:
 ::
 
 	>>> bg.integer_validator("name", "John")
