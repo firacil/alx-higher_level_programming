@@ -1,0 +1,30 @@
+Test Cases for 1-my_list module
+--------------------------
+
+1-my_list module will print sorted list and inherits from list
+
+
+Usage
+======
+
+Improting function from module:
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+
+::
+
+	>>> print(my_list)
+	[]
+
+::
+
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> print(my_list)
+	[1]
+
+::
+
+	>>> my_list.append(4)
+	>>> print(my_list)
+	[1, 4]
