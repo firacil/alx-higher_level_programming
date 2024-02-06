@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' Class MyList defined'''
+"""Module inherits from the list class"""
 
 
 class MyList(list):
@@ -7,5 +7,4 @@ class MyList(list):
 
     def print_sorted(self):
         ''' function that prints sorted list'''
-        sorted_list = sorted(self)
-        print(sorted_list)
+        print(sorted(self))
