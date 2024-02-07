@@ -8,6 +8,8 @@ Usage
 ======
 
 Improting function from module:
+::
+
 	>>> MyList = __import__('1-my_list').MyList
 	>>>
 	>>> my_list = MyList()
@@ -58,7 +60,6 @@ If list passed
 	[1, 2, 3]
 	>>>
 
--------------------------------------------
 checking for negative numbers
 ::
 
