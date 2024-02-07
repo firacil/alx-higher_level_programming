@@ -1,4 +1,4 @@
-Test Cases for 1-my_list module
+Test Cases for 1-my_list.py
 --------------------------
 
 1-my_list module will print sorted list and inherits from list
@@ -7,11 +7,10 @@ Test Cases for 1-my_list module
 Usage
 ======
 
-Improting function from module:
+Import:
 ::
 
 	>>> MyList = __import__('1-my_list').MyList
-	>>>
 	>>> my_list = MyList()
 
 check Empty list
