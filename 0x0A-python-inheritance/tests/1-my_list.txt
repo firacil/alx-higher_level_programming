@@ -14,18 +14,17 @@ Improting function from module:
 	>>>
 	>>> my_list = MyList()
 
-Normal common case
+check Empty list
 ::
 
 	>>> print(my_list)
-	[]
-	>>> my_list = MyList()
+        []
+
+Normal common case
+::
+
 	>>> my_list.append(1)
-	>>> print(my_list)
-	[1]
 	>>> my_list.append(4)
-	>>> print(my_list)
-	[1, 4]
 	>>> my_list.append(2)
 	>>> my_list.append(3)
 	>>> my_list.append(5)
