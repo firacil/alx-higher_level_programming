@@ -90,3 +90,13 @@ checking for undefined object
 	...
 	NameError: name 'my_list3' is not defined
 	>>>
+
+checking for parent object
+::
+
+	>>> my_list = [1, 2, 3]
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	...
+	AttributeError: 'list' object has no attribute 'print_sorted'
+	>>>
