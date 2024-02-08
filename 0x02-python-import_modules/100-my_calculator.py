@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """program to import all functions from the file calcluator_1.py"""
-if __name__ == "main__":
+if __name__ == "__main__":
     """ implements arthimatic operation"""
     from calculator_1 import add, sub, mul, div
     import sys
