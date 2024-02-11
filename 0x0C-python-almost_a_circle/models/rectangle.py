@@ -89,10 +89,15 @@ class Rectangle(Base):
         """ prints in stdout the Rectangle
             instance with the character '#'
         """
+        for _ in range(self.__y):
+            print()  # print y blank lines for y coord
+
+        #  print each row of the rec
         for i in range(self.__height):
-            for i in range(self.__width):
-                print("#", end="")
-            print()
+            #  print x spaces for x coord
+            print(" " * self.__x, end="")
+            #  print '#' for width
+            print("#" * self.__width)
 
     def __str__(self):
         """returns Rectangle values"""
