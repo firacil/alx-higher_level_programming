@@ -77,3 +77,19 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)  # calling super class Base..
+
+    def area(self):
+        """ return area of rectangle"""
+        width = self.__width
+        height = self.__height
+
+        return (width * height)
+
+    def display(self):
+        """ prints in stdout the Rectangle
+            instance with the character '#'
+        """
+        for i in range(self.__height):
+            for i in range(self.__width):
+                print("#", end="")
+            print()
