@@ -63,4 +63,4 @@ class Square(Rectangle):
         """returns the dictionary representation of rectangle"""
         o_dic = {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
 
-        return (o_dic)
+        return o_dic
