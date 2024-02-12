@@ -2,6 +2,7 @@
 """Defining Class Base"""
 import os
 import json
+import csv
 
 
 class Base:
@@ -77,3 +78,39 @@ class Base:
                 for d in list_dic:
                     list_of_inst.append(cls.create(**d))
         return list_of_inst
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes list_objs and saves to file"""
+
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline="") as filecsv:
+            if list_objs is None or list_objs == []:
+                filecsv.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                wr = csv.DictWriter(filecsv, fieldnames=fieldnames)
+                for obj in list_objs:
+                    wr.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserializes CSV format from a file"""
+
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r", newline="") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                list_dic = csv.DictReader(csvfile, fieldnames=fieldnames)
+                list_dic = [dict([k, int(v)]
+                            for k, v in d.items()) for d in list_dic
+                            ]
+                return [cls.create(**d) for d in list_dic]
+        except IOError:
+            return []
