@@ -94,6 +94,21 @@ class test_rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = Rectangle(4, [1, 2])
 
+    def test_x_type(self):
+        '''
+            test x when string passed
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, 5, "32")
+
+    def test_x_boo(self):
+        '''
+            test when x passed as bool
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, 5, True)
+
+
     def test_area(self):
         '''
             testing area funtion

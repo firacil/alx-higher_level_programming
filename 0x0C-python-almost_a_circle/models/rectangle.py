@@ -46,13 +46,13 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """value setter"""
-        if isinstance(value, int):
-            self.__x = value
-        else:
+        if not isinstance(value, int):
             raise TypeError("x must be an integer")
-
+        if type(value) == bool:
+            raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
+        self.__x = value
 
     @property
     def y(self):
@@ -62,13 +62,13 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """value setter"""
-        if isinstance(value, int):
-            self.__y = value
-        else:
+        if not isinstance(value, int):
             raise TypeError("y must be an integer")
-
+        if type(value) == bool:
+            raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
+        self.__y = value
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Contructor for rectangle class"""
