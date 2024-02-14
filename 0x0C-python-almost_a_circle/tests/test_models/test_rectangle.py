@@ -38,6 +38,20 @@ class test_rectangle(unittest.TestCase):
         self.rec = Rectangle(4, 5)
         self.assertEqual(5, self.rec.height)
 
+    def test_x(self):
+        '''
+            testing rectangle x getter
+        '''
+        self.rec.x = 32
+        self.assertEqual(32, self.rec.x)
+
+    def test_y(self):
+        '''
+            testing rectangles y getter
+        '''
+        self.rec.y = 64
+        self.assertEqual(64, self.rec.y)
+
     def test_area(self):
         '''
             testing area funtion
