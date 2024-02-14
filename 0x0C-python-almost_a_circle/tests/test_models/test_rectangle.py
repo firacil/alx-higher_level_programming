@@ -108,6 +108,33 @@ class test_rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = Rectangle(4, 5, True)
 
+    def test_x_all(self):
+        '''
+            test when over passed
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, 5, [1, 2])
+
+    def test_y_type(self):
+        '''
+            test when string passed as y
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, 5, 32, "64")
+
+    def test_y_boo(self):
+        '''
+            test when y passed as bool
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, 5, 32, True)
+
+    def test_y_all(self):
+        '''
+            test when over passed
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, 5, 32, [64, 65])
 
     def test_area(self):
         '''
