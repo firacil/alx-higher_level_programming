@@ -108,8 +108,27 @@ class TestMethod(unittest.TestCase):
     '''
 
     @classmethod
-    def set_up(cls):
+    def setUpClass(cls):
         '''
             checking doctests
         '''
         cls.setup = inspect.getmembers(Base, inspect.isfunction)
+
+    def test_mod_ds(self):
+        '''
+            test if module docstring documentation exist
+        '''
+        self.assertTrue(len(Base.__doc__) >= 1)
+
+    def test_class_docs(self):
+        '''
+            test if class docstring doc exist
+        '''
+        self.assertTrue(len(Base.__doc__) >= 1)
+
+    def test_fun_docs(self):
+        '''
+            test docstring for function
+        '''
+        for fun in self.setup:
+            self.assertTrue(len(fun[1].__doc__) >= 1)
