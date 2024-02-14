@@ -52,6 +52,13 @@ class test_rectangle(unittest.TestCase):
         self.rec = Rectangle(4, 5, 32, 64)
         self.assertEqual(64, self.rec.y)
 
+    def test_width_type(self):
+        '''
+            testing when string recived by width
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle("4", 5)
+
     def test_area(self):
         '''
             testing area funtion
