@@ -8,12 +8,12 @@ from models.rectangle import Rectangle
 
 class test_rectangle(unittest.TestCase):
     '''
-    class to test rectangle
+        class to test rectangle
     '''
 
     def test_attr(self):
         '''
-        testing attributes of rectangle
+            testing attributes of rectangle
         '''
         rectangle = Rectangle(5, 10, 1, 2, 100)
         self.assertEqual(rectangle.width, 5)
