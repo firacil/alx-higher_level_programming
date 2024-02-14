@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 import unittest
 from models.base import Base
+from models.square import Square
 import json
+import inspect
 '''
     defining class test_base
 '''
@@ -40,6 +42,13 @@ class test_base(unittest.TestCase):
         b = Base({"id": 53})
         self.assertEqual({"id": 53}, b.id)
 
+    def test_tuple_id(self):
+        '''
+            checking when id is tuple
+        '''
+        b = Base((32,))
+        self.assertEqual((32,), b.id)
+
     def test_id_zero(self):
         '''
             checking when id is zero
@@ -53,3 +62,12 @@ class test_base(unittest.TestCase):
         '''
         b = Base(-23)
         self.assertEqual(-23, b.id)
+
+    def test_to_json(self):
+        '''
+            testing when json
+        '''
+        s = Square(2)
+        json_dict = s.to_dictionary()
+        json_str = Base.to_json_string([json_dict])
+        self.assertEqual(type(json_str), str)
