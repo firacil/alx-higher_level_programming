@@ -59,6 +59,20 @@ class test_rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = Rectangle("4", 5)
 
+    def test_width_boo(self):
+        '''
+            let me test when bool passed to width
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(True, 5)
+
+    def test_width_all(self):
+        '''
+            test when width over passed
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle((1, 2), 5)
+
     def test_area(self):
         '''
             testing area funtion
