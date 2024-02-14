@@ -71,3 +71,31 @@ class test_base(unittest.TestCase):
         json_dict = s.to_dictionary()
         json_str = Base.to_json_string([json_dict])
         self.assertEqual(type(json_str), str)
+
+    def test_json_val(self):
+        '''
+            testing the json string
+        '''
+        s = Square(2, 0, 0, 89)
+        json_dict = s.to_dictionary()
+        json_str = Base.to_json_string([json_dict])
+        self.assertEqual(json.loads(json_str),
+                        [{"id": 89, "y": 0, "size": 2, "x": 0}])
+
+    def test_json_None(self):
+        '''
+            testing when None
+        '''
+        s = Square(2, 0, 0, 89)
+        json_dict = s.to_dictionary()
+        json_str = Base.to_json_string(None)
+        self.assertEqual(json_str, "[]")
+
+    def test_json_empty(self):
+        '''
+            testing when empty list passed
+        '''
+        s = Square(2, 0, 0, 89)
+        json_dict = s.to_dictionary()
+        json_str = Base.to_json_string([])
+        self.assertEqual(json_str, "[]")
