@@ -1,14 +1,20 @@
 #!/usr/bin/python3
-"""defining class TestRectangle"""
+"""
+defining class TestRectangle
+"""
 import unittest
 from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
-    """class to test rectangle"""
+    """
+    class to test rectangle
+    """
 
     def test_attr(self):
-        """testing attributes of rectangle"""
+        """
+        testing attributes of rectangle
+        """
         rectangle = Rectangle(5, 10, 1, 2, 100)
         self.assertEqual(rectangle.width, 5)
         self.assertEqual(rectangle.height, 10)
