@@ -136,6 +136,34 @@ class test_rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = Rectangle(4, 5, 32, [64, 65])
 
+    def test_width_val(self):
+        '''
+            test value of width
+        '''
+        with self.assertRaises(ValueError):
+            r = Rectangle(-4, 5)
+
+    def test_height_val(self):
+        '''
+            test value of height
+        '''
+        with self.assertRaises(ValueError):
+            r = Rectangle(4, -5)
+
+    def test_x_val(self):
+        '''
+            test value of x
+        '''
+        with self.assertRaises(ValueError):
+            r = Rectangle(4, 5, -32)
+
+    def test_y_val(self):
+        '''
+            test value of y
+        '''
+        with self.assertRaises(ValueError):
+            r = Rectangle(4, 5, 32, -64)
+
     def test_area(self):
         '''
             testing area funtion
