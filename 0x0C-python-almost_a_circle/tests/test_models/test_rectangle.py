@@ -164,6 +164,34 @@ class test_rectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r = Rectangle(4, 5, 32, -64)
 
+    def test_width_zero_val(self):
+        '''
+            test when width is zero
+        '''
+        with self.assertRaises(ValueError):
+            r = Rectangle(0, 5)
+
+    def test_height_zero_val(self):
+        '''
+            test when height is zero
+        '''
+        with self.assertRaises(ValueError):
+            r = Rectangle(4, 0)
+
+    def test_x_zero_val(self):
+        '''
+            test when x is zero
+        '''
+        self.r = Rectangle(4, 5, 0)
+        self.assertEqual(0, self.r.x)
+
+    def test_y_zero_val(self):
+        '''
+            test when y is zero
+        '''
+        self.r = Rectangle(4, 5, 32, 0)
+        self.assertEqual(0, self.r.y)
+
     def test_area(self):
         '''
             testing area funtion
