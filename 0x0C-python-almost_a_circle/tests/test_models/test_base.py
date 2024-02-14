@@ -21,7 +21,35 @@ class test_base(unittest.TestCase):
 
     def test_id_not_none(self):
         ''' 
-            class to check id
+            check id
         '''
         b = Base(89)
         self.assertEqual(89, b.id)
+
+    def test_id_list(self):
+        '''
+            checking when id is list
+        '''
+        b = Base([1, 2])
+        self.assertEqual([1, 2], b.id)
+
+    def test_check_dic(self):
+        '''
+            checking when id is dict
+        '''
+        b = Base({"id": 53})
+        self.assertEqual({"id": 53}, b.id)
+
+    def test_id_zero(self):
+        '''
+            checking when id is zero
+        '''
+        b = Base(0)
+        self.assertEqual(0, b.id)
+
+    def test_id_neg(self):
+        '''
+            when id is negative
+        '''
+        b = Base(-23)
+        self.assertEqual(-23, b.id)
