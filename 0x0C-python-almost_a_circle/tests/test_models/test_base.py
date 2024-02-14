@@ -99,3 +99,17 @@ class test_base(unittest.TestCase):
         json_dict = s.to_dictionary()
         json_str = Base.to_json_string([])
         self.assertEqual(json_str, "[]")
+
+
+
+class TestMethod(unittest.TestCase):
+    '''
+        class testing methods of Base
+    '''
+
+    @classmethod
+    def set_up(cls):
+        '''
+            checking doctests
+        '''
+        cls.setup = inspect.getmembers(Base, inspect.isfunction)
