@@ -73,6 +73,27 @@ class test_rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = Rectangle((1, 2), 5)
 
+    def test_height_type(self):
+        '''
+            test when string passed to height
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, "5")
+
+    def test_height_boo(self):
+        '''
+            check for typeerror when boolean passed
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, True)
+
+    def test_height_all(self):
+        '''
+            check when another over data passed
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, [1, 2])
+
     def test_area(self):
         '''
             testing area funtion
