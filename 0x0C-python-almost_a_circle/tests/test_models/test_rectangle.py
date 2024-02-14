@@ -11,6 +11,30 @@ class test_rectangle(unittest.TestCase):
         class to test rectangle
     '''
 
+    def test_startup(self):
+        '''
+        intialize instance width and height
+        '''
+        self.r = Rectangle(4, 5)
+
+    def test_teardown(self):
+        '''
+            delete created instances
+        '''
+        del self.r
+
+    def test_width(self):
+        '''
+            testing rectangles width getter
+        '''
+        self.assertEqual(4, self.r.width)
+
+    def test_height(self):
+        '''
+            testing rectangles height getter
+        '''
+        self.assertEqual(5, self.r.height)
+
     def test_attr(self):
         '''
             testing attributes of rectangle
