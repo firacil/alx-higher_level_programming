@@ -42,14 +42,14 @@ class test_rectangle(unittest.TestCase):
         '''
             testing rectangle x getter
         '''
-        self.rec.x = 32
+        self.rec = Rectangle(4, 5, 32)
         self.assertEqual(32, self.rec.x)
 
     def test_y(self):
         '''
             testing rectangles y getter
         '''
-        self.rec.y = 64
+        self.rec = Rectangle(4, 5, 32, 64)
         self.assertEqual(64, self.rec.y)
 
     def test_area(self):
