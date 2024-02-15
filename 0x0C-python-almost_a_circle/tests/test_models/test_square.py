@@ -28,3 +28,14 @@ class TestSquare(unittest.TestCase):
         '''
         s = Square(5, 32, 64, 89)
         self.assertEqual(str(s), "[Square] (89) 32/64 - 5")
+
+    def test_update(self):
+        '''
+            test when updated
+        '''
+        s = Square(5, 32, 64, 89)
+        s.update(90, 6, 33, 65)
+        self.assertEqual(s.id, 90)
+        self.assertEqual(s.size, 6)
+        self.assertEqual(s.x, 33)
+        self.assertEqual(s.y, 65)
