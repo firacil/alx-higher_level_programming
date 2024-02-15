@@ -232,3 +232,17 @@ class test_rectangle(unittest.TestCase):
     def test_str_load(self):
         r = Rectangle(4, 5, 32, 64, 89)
         self.assertEqual(r.__str__(), "[Rectangle] (89) 32/64 - 4/5")
+
+    def test_update_id(self):
+        '''
+            check when id  was updated
+        '''
+        self.r.update(88)
+        self.assertEqual(88, self.r.id)
+
+    def test_width_update(self):
+        '''
+            check when width updated
+        '''
+        self.r.update(88, 45)
+        self.assertEqual(45, self.r.width)
