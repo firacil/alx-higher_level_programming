@@ -192,6 +192,34 @@ class test_rectangle(unittest.TestCase):
         self.r = Rectangle(4, 5, 32, 0)
         self.assertEqual(0, self.r.y)
 
+    def test_width_float(self):
+        '''
+            check when width is float
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4.5, 5)
+
+    def test_height_float(self):
+        '''
+            check when height is float
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, 5.05)
+
+    def test_x_float(self):
+        '''
+            check when x is float
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, 5, 32.05)
+
+    def test_y_float(self):
+        '''
+            check when y is float
+        '''
+        with self.assertRaises(TypeError):
+            r = Rectangle(4, 5, 32, 64.44)
+
     def test_area(self):
         '''
             testing area funtion
