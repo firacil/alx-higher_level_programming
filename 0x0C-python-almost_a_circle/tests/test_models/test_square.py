@@ -63,3 +63,10 @@ class TestSquare(unittest.TestCase):
         '''
         with self.assertRaises(ValueError):
             s = Square(-5)
+
+    def test_size_zero(self):
+        '''
+            testing when size passed as zero
+        '''
+        with self.assertRaises(ValueError):
+            s = Square(0)
