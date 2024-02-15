@@ -235,8 +235,40 @@ class test_rectangle(unittest.TestCase):
 
     def test_update_id(self):
         '''
-            testing when width updated
+            testing when id updated
         '''
         r = Rectangle(4, 5)
         r.update(44, 55)
         self.assertEqual(r.id, 44)
+
+    def test_update_width(self):
+        '''
+            testing when width updated
+        '''
+        r = Rectangle(89, 4, 5)
+        r.update(88, 6, 7)
+        self.assertEqual(r.width, 6)
+
+    def test_update_height(self):
+        '''
+            testing when height updated
+        '''
+        r = Rectangle(89, 4, 5, 67)
+        r.update(88, 6, 7, 77)
+        self.assertEqual(r.height, 7)
+
+    def test_update_x(self):
+        '''
+            testing when x updated
+        '''
+        r = Rectangle(89, 4, 5, 67, 80)
+        r.update(88, 6, 7, 77, 90)
+        self.assertEqual(r.x, 77)
+
+    def test_update_y(self):
+        '''
+            testing when y updated
+        '''
+        r = Rectangle(89, 4, 5, 67, 80)
+        r.update(88, 6, 7, 77, 90)
+        self.assertEqual(r.y, 90)
