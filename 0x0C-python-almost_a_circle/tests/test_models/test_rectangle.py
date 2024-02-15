@@ -272,3 +272,31 @@ class test_rectangle(unittest.TestCase):
         r = Rectangle(89, 4, 5, 67, 80)
         r.update(88, 6, 7, 77, 90)
         self.assertEqual(r.y, 90)
+
+    def test_update_dict(self):
+        '''
+            testing update with **kwargs
+        '''
+        r = Rectangle(89, 4, 5, 32, 64)
+        r.update(y=55, width=7, height=12, id=88)
+        self.assertEqual(88, r.id)
+        self.assertEqual(12, r.height)
+        self.assertEqual(7, r.width)
+        self.assertEqual(55, r.y)
+        self.assertEqual(5, r.x)
+
+    def test_to_dict(self):
+        '''
+            test type which returned from method to_dictionary
+        '''
+        r = Rectangle(5, 4)
+        self.assertEqual(type(r.to_dictionary()), dict)
+
+    def test_to_dict_val(self):
+        '''
+            test whether method is working propely
+        '''
+        r = Rectangle(4, 5, 0, 0, 400)
+        to_be_tested_dict = r.to_dictionary()
+        expected_dict = {'id': 400, 'width': 4, 'height': 5, 'x': 0, 'y': 0}
+        self.assertEqual(to_be_tested_dict, expected_dict)
