@@ -226,3 +226,9 @@ class test_rectangle(unittest.TestCase):
         '''
         rectangle = Rectangle(5, 10)
         self.assertEqual(rectangle.area(), 50)
+        r = Rectangle(4, 5, 18, 18, 3)
+        self.assertEqual(r.area(), 4 * 5)
+
+    def test_str_load(self):
+        r = Rectangle(4, 5, 32, 64, 89)
+        self.assertEqual(r.__str__(), "[Rectangle] (89) 32/64 - 4/5")
