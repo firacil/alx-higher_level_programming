@@ -5,6 +5,7 @@ from models.square import Square
     module to test Square
 '''
 
+
 class TestSquare(unittest.TestCase):
     '''
         class to test Square
