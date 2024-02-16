@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defining Class Base"""
 import os
+import turtle
 import json
 import csv
 
@@ -114,3 +115,44 @@ class Base:
                 return [cls.create(**d) for d in list_dic]
         except IOError:
             return []
+
+    @staticmethod
+    def draw (list_rectangles, list_squares):
+        '''
+            Draw rectangles and squares using turtle mod
+            Args:
+                list_rectangles
+                list_squares
+        '''
+        t = turtle.Turtle()
+        t.screen.bgcolor("#b7312c")
+        t.pensize(3)
+        t.shape("turtle")
+
+        t.color("#ffffff")
+        for r in list_rectangles:
+            t.showturtle()
+            t.up()
+            t.goto(r.x, r.y)
+            t.down()
+            for i in range(2):
+                t.forward(r.width)
+                t.left(90)
+                t.forward(r.height)
+                t.left(90)
+            t.hideturtle()
+
+        t.color("#b5e3d8")
+        for s in list_squares:
+            t.showturtle()
+            t.up()
+            t.goto(s.x, s.y)
+            t.down()
+            for i in range(2):
+                t.forward(s.width)
+                t.left(90)
+                t.forward(s.height)
+                t.left(90)
+            t.hideturtle()
+
+        t.exitonclick()
