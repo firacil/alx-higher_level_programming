@@ -300,3 +300,26 @@ class test_rectangle(unittest.TestCase):
         to_be_tested_dict = r.to_dictionary()
         expected_dict = {'id': 400, 'width': 4, 'height': 5, 'x': 0, 'y': 0}
         self.assertEqual(to_be_tested_dict, expected_dict)
+
+        def test_saving_file(self):
+            '''
+                test saving a file into json format
+            '''
+            try:
+                os.remove("Rectangle.json")
+            except:
+                pass
+            r = Rectangle(4, 5, 0, 0, 89)
+            Rectangle.save_to_file([r])
+
+            with open("Rectangle.json", "r") as file:
+                c = file.read()
+            ex = [{"x": 0, "y": 0, "id": 89, "height": 5, "width": 4}]
+            self.assertEqual(ex, json.loads(c))
+
+        def test_save_no_itera(self):
+            '''
+                test when non iterable to the function
+            '''
+            with self.assertRaises(TypeError):
+                Rectangle.save_to_file(self.r)
