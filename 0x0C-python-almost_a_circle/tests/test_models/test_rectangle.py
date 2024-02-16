@@ -333,3 +333,7 @@ class test_rectangle(unittest.TestCase):
             with patch('sys.stdout', new = stringIO()) as fake_out:
                 r.display()
                 self.assertEqual(fake_out.getvalue(), ex)
+
+
+if __name__ == '__main__':
+    unittest.main()
