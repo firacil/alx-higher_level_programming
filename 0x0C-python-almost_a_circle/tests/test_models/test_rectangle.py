@@ -323,3 +323,13 @@ class test_rectangle(unittest.TestCase):
             '''
             with self.assertRaises(TypeError):
                 Rectangle.save_to_file(self.r)
+
+        def test_display(self):
+            '''
+                test display function
+            '''
+            r = Rectangle(3, 2)
+            ex = "###\n###\n"
+            with patch('sys.stdout', new = stringIO()) as fake_out:
+                r.display()
+                self.assertEqual(fake_out.getvalue(), ex)
