@@ -1,5 +1,5 @@
 # 0x0D. SQL - Introduction
-#### SQL #### MySQL
+#### SQL  MySQL
 
 ## Author's Details
 Name: *Firaol Mk.*
