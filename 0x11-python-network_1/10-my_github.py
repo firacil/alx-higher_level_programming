@@ -6,7 +6,7 @@
 """
 import requests
 from sys import argv
-
+from requests.auth import HTTPBasicAuth
 
 if __name__ == "__main__":
     url = ('https://github.com/user')
