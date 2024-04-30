@@ -17,4 +17,4 @@ if __name__ == "__main__":
     # send a POST request to the passed URL with the email as parameter
     r = requests.post(url, data=data)
     # Now Let Print it
-    print("{}".format(response.text))
+    print("{}".format(r.text))
