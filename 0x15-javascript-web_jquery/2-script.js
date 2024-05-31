@@ -1,3 +1,4 @@
+/* global $ */
 $(document).ready(function () {
   // Select the elements using Jquery
   // Add a click event listner using jquery
