@@ -1,4 +1,5 @@
 // script that update class of the header
+/* global $ */
 $(document).ready(function () {
   // select elements using jquery and set click event
   $('#toggle_header').click(function () {
