@@ -1,4 +1,5 @@
 // script to add, remove and clear list
+/* global $ */
 $(document).ready(function () {
   // add item to list
   $('#add_item').click(function () {
