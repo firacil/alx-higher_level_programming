@@ -1,4 +1,5 @@
 // adding new item using jquery
+/* global $ */
 $(document).ready(function () {
   // select element and add click event
   $('#add_item').click(function () {
