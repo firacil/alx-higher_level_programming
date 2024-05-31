@@ -1,3 +1,4 @@
+/* global $ */
 $(document).ready(function () {
   // by using get method we will fetch data in the provided url
   // then display in our page
