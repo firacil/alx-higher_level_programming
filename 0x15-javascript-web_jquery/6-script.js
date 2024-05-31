@@ -1,4 +1,5 @@
 // script to update text in header on click of element of id 'update_header'
+/* global $ */
 $(document).ready(function () {
   // select element and add click event using jquery
   $('#update_header').click(function () {
